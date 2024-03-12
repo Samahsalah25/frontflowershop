@@ -17,7 +17,9 @@ const Home = () => {
 
   const fetchFeaturedProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/admin/products");
+      const response = await axios.get(
+        "https://backendflowershop.onrender.com/admin/products"
+      );
       setFeaturedProducts(response.data.slice(0, 8));
     } catch (error) {
       console.error("Error fetching featured products:", error);
@@ -88,7 +90,7 @@ const Home = () => {
               {featuredProducts.map((product) => (
                 <div key={product.id} className="slider-item">
                   <img
-                    src={`http://localhost:5000/${product.Image}`}
+                    src={`https://backendflowershop.onrender.com/${product.Image}`}
                     alt={product.name}
                     className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 "
                   />

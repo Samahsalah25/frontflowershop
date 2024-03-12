@@ -29,7 +29,7 @@ const RegistorForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/signup",
+        "https://backendflowershop.onrender.com/signup",
         formData
       );
 

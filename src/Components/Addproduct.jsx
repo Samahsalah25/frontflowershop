@@ -40,7 +40,7 @@ const AddProduct = () => {
       formData.append("createdBy", userName);
 
       const response = await axios.post(
-        "http://localhost:5000/admin/createproduct",
+        "https://backendflowershop.onrender.com/admin/createproduct",
         formData,
         {
           headers: {

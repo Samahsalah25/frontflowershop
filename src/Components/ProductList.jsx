@@ -21,7 +21,7 @@ const ProductList = () => {
   const [userName, setUserName] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:5000/admin/products")
+      .get("https://backendflowershop.onrender.com/admin/products")
       .then((response) => {
         setProducts(response.data);
       })
@@ -38,7 +38,9 @@ const ProductList = () => {
     if (confirmDelete) {
       // If user confirms deletion, send request to delete product
       axios
-        .delete(`http://localhost:5000/admin/deleteProducts/${productId}`)
+        .delete(
+          `https://backendflowershop.onrender.com/admin/deleteProducts/${productId}`
+        )
         .then((response) => {
           console.log("Product deleted:", response.data);
           // Update products state after deletion
@@ -78,7 +80,7 @@ const ProductList = () => {
               <div className="p-4">
                 <img
                   className="w-full h-40 object-cover object-center mb-4 rounded-md  hover:scale-105 transition-transform duration-300 "
-                  src={`http://localhost:5000/${product.Image}`}
+                  src={`https://backendflowershop.onrender.com/${product.Image}`}
                   // src="https://img.freepik.com/free-photo/making-bouquets_23-2148013625.jpg?t=st=1709849844~exp=1709853444~hmac=99bed0c639c257618e82db1c8cf4afe77515f4193873eef18865bbb376544626&w=826"
                   alt={product.productName}
                 />

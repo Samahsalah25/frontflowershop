@@ -20,7 +20,7 @@ const EditProduct = () => {
   useEffect(() => {
     // Fetch product details from backend API
     axios
-      .get(`http://localhost:5000/admin/getproductbyid/${id}`)
+      .get(`https://backendflowershop.onrender.com/admin/getproductbyid/${id}`)
       .then((response) => {
         setProduct(response.data);
       })
@@ -40,7 +40,7 @@ const EditProduct = () => {
       formData.append("description", product.description);
       formData.append("Image", product.Image);
       await axios.patch(
-        `http://localhost:5000/admin/updataproduct/${id}`,
+        `https://backendflowershop.onrender.com/admin/updataproduct/${id}`,
         formData
       );
 
