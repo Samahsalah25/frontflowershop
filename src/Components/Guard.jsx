@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, isAuthenticated, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      isAuthenticated ? <Component {...props} /> : <Link to="/Login" />
+      isAuthenticated ? <Component {...props} /> : <lin to="/Login" />
     }
   />
 );
