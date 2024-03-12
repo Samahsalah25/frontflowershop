@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input:focus {
+  border-color: pink;
+  border: none;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn {
+  animation: pulse 1.5s infinite alternate;
+}
+.hover-effect:hover {
+  transform: translateY(-2px);
+}
+.animate-form {
+  animation: bloom 2s ease-in-out;
+}
+
+@keyframes bloom {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+.confirm-dialog {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-dialog p {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
